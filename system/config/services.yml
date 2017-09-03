@@ -1,0 +1,28 @@
+services:
+    GroupTWO.system.controller:
+        class: GroupTWO\system\controller\main
+        arguments:
+            - @config
+            - @controller.helper
+            - @language
+            - @template
+            - @user
+            - @dbal.conn
+            - @request
+            - %core.root_path%
+            - %core.php_ext%
+            - @notification_manager
+            - @cache
+            - @dispatcher
+            - @pagination
+    GroupTWO.system.notification.type.images:
+        class: GroupTWO\system\notification\type\images
+        shared: false # service MUST not be shared for this to work!
+        parent: notification.type.base
+        calls:
+            - [set_controller_helper, ['@controller.helper']]
+            - [set_config, ['@config']]
+            - [set_user_loader, ['@user_loader']]
+        tags:
+            - { name: notification.type }
+

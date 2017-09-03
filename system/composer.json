@@ -1,0 +1,30 @@
+{
+    "name": "GroupTWO/system",
+    "type": "phpbb-extension",
+    "description": "System for GroupTWO",
+    "homepage": "google.com",
+    "version": "1.0.1",
+    "time": "2017-01-03",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "mael",
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "phpbb/phpbb": ">=3.2.0"
+
+    },
+    "extra": {
+        "display-name": "System for G",
+        "soft-require": {
+            "phpbb/phpbb": ">=3.2.0"
+        },
+        "version-check": {
+            "host": "www.phpbb.com",
+            "directory": "/customise/db/extension/avatar_in_last_post",
+            "filename": "version_check"
+        }
+    }
+}
