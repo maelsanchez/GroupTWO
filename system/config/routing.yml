@@ -1,0 +1,6 @@
+GroupTWO_system_route:
+    path: /images/{e}
+    defaults: { _controller: GroupTWO.system.controller:handle, e: 0 }
+    requirements:
+        e: \d+
+

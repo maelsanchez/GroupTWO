@@ -99,5 +99,7 @@ class main
         );
 
         $this->notification_manager->add_notifications('GroupTWO.system.notification.type.images', $sql_ary);
+
+        //RESPONSE HERE
     }
 }
